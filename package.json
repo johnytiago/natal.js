@@ -1,0 +1,15 @@
+{
+  "name": "nataljs",
+  "version": "1.0.0",
+  "description": "secret santa generator for my family",
+  "main": "natal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "johnytiago",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-pdf": "^8.0.0",
+    "stream-replace": "^1.0.0"
+  }
+}
