@@ -8,6 +8,7 @@ Olá **FROM**,
   As regras são estas:
 
   - A prenda não deve ter um valor maior do que 20€.
+  - A Tia Zelinhas faz anos, ofereçam uma prenda à princesa!
   - Todas as casas devem oferecer uma prendinha á matriarca, a avó Maria.
 
 ### Tu, FROM, vais oferecer um prenda ao **<span style="font-size: 20px">TO</span>**.  
