@@ -2,7 +2,7 @@ var markdownpdf = require("markdown-pdf")
 const fs = require('fs')
 const replace  = require('stream-replace')
 
-fs.createReadStream("./template.md")
+fs.createReadStream("./src/template.md")
 .pipe(replace(/FROM/g, "Zezinho"))
 .pipe(replace(/TO/g, "Tio Langão"))
 .pipe(markdownpdf())
