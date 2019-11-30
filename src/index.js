@@ -14,7 +14,7 @@ function output(from, to) {
   fs.createReadStream("./src/template.md")
   .pipe(replace(/FROM/g, from))
   .pipe(replace(/TO/g, to))
-  .pipe(markdownpdf())
+  .pipe(markdownpdf({remarkable: {html: true}}))
   .pipe(fs.createWriteStream(`${OUTPUT_DIR}/${from}.pdf`))
   .on('close', () => {
     console.log(`Found match for ${from}`);
@@ -26,7 +26,7 @@ fs.mkdir( OUTPUT_DIR, (err) => {
     console.log("Folder already created")
 
   families.forEach((casa, index) => {
-    casa.forEach(membro => {
+    casa.forEach(member => {
       // First: find a house with free member
       do {
         houseDrawn = (Math.floor(Math.random() * families.length))
@@ -42,7 +42,7 @@ fs.mkdir( OUTPUT_DIR, (err) => {
 
       taken[houseDrawn][memberChoice] = true;
       count[houseDrawn]++;
-      output(membro, families[houseDrawn][memberChoice]);
+      output(member, families[houseDrawn][memberChoice]);
     })
   })
 })
